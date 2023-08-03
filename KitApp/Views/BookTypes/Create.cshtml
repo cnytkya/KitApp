@@ -1,0 +1,30 @@
+﻿@model BookType
+
+<form method="post">
+
+    <div class="border p-3 mt-5">
+        <div class="row pb-3">
+            <h2 class="text-bg-primary">Kitap Türü Ekle</h2>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Kitap Türü Ekle</button>
+        <a asp-controller="BookTypes" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">Listeye Geri Dön</a>
+    </div>
+
+</form>
+
+@*@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
+Buradaki amaç, form doğrulama (validation) ile ilgili JavaScript 
+    kütüphanelerini veya kodlarını sayfada kullanmak için Scripts bölümü 
+    içinde partial view olarak eklemektir.
+*@

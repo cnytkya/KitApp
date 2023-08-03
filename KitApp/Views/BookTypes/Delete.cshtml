@@ -1,0 +1,19 @@
+﻿@model BookType
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-5">
+        <div class="row pb-3">
+            <h2 class="text-bg-primary">Kitap Türü Sil</h2>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Kitap Türü Sil</button>
+        <a asp-controller="BookTypes" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">Listeye Geri Dön</a>
+    </div>
+
+</form>
